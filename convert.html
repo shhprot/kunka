@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <!-- <h1>Conventor </h1>
+    
+    <input type="text" id="amount" placeholder="Сумма">
+    <select v-model="fromCurrency" id="from">
+        <option value="личное">USD</option>
+        <option value="рабочее">EUR</option>
+        <option value="покупки">RUB</option>
+    </select> 
+    <select v-model="toCurrency" id="to">
+        <option value="личное">USD</option>
+        <option value="рабочее">EUR</option>
+        <option value="покупки">RUB</option>
+    </select>
+
+    <button onclick="addTask()" class="convertButton">Конвертировать</button>
+    <h2>Результат: {{ convertedAmount }}</h2> -->
+
+
+  <div>
+    <h1>Конвертер валют</h1>
+    <div>
+      <label for="amount">Сумма:</label>
+      <input type="number" v-model="amount" id="amount" />
+    </div>
+    <div>
+      <label for="from">Из:</label>
+      <select v-model="fromCurrency" id="from">
+        <option v-for="currency in currencies" :key="currency">{{ currency }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="to">В:</label>
+      <select v-model="toCurrency" id="to">
+        <option v-for="currency in currencies" :key="currency">{{ currency }}</option>
+      </select>
+    </div>
+    <div>
+      <h2>Результат: {{ convertedAmount }}</h2>
+    </div>
+  </div>
+   
+</body>    
+
+<script src="script.js"></script>
+</html>
